@@ -485,7 +485,7 @@ void Player::play(){   //play the game
 }
 void Player::checkGame() {
 		if (gameOver == MAX) 
-				cout << "We win!" << endl;
+				cout << "I win!" << endl;
 		else 
 				cout << "Opponent win!" << endl;
 }
@@ -500,6 +500,7 @@ void Player::rollBack() {
 void Player::move() {//make a move based on the move made by the opponent
 		lastMe_ = me;
 		sab.setStep(step);
+        cout << "Computing. Be patient, it takes time to become intelligent" << endl;
 		me = sab.searchAB(curState);		
 		if (!checkLose(me))
 				curState.update(MAX, me);

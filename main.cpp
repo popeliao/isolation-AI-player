@@ -15,8 +15,6 @@ void game() {
         role = MIN;
         cout << "I am O now!" << endl;
     }
-    cout << "Timing limit per move:" << endl;
-    cin >> tmp;
     Player p(role);
     p.play();       
 }
